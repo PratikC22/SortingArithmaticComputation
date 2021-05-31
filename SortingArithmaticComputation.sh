@@ -1,3 +1,4 @@
 #! /bin/bash -x
 
-echo "Welcome to Sorting Arithmatic Computations"
+read -p "Enter 3 inputs a, b and c : " a b c;
+
