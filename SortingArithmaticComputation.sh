@@ -17,9 +17,9 @@ Results["condition2"]=$condition2
 Results["condition3"]=$condition3
 Results["condition4"]=$condition4
 
-#Displaying results:
-echo "$a+$b*$c = $condition1";
-echo "$a*$b+$c = $condition2";
-echo "$c+$a/$b = $condition3";
-echo "$a%$b+$c = $condition4";
+#Displaying results from associative array:
+echo "$a+$b*$c = ${Results[condition1]}";
+echo "$a*$b+$c = ${Results[condition2]}";
+echo "$c+$a/$b = ${Results[condition3]}";
+echo "$a%$b+$c = ${Results[condition4]}";
 
