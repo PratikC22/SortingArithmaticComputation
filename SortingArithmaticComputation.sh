@@ -21,12 +21,12 @@ echo "Results of all computations : " ${Results[@]}
 Array=(${Results[@]})
 echo ${Array[*]}
 
-#Sorting in Descending order :
+#Sorting in Ascending order :
 for (( i=0;i<${#Array[@]};i++ ))
 do
 	for (( j=0;j<${#Array[@]};j++ ))
 	do
-	if [ ${Array[i]} -gt ${Array[j]} ]
+	if [ ${Array[i]} -lt ${Array[j]} ]
 	then
 	temp=${Array[i]}
 	Array[i]=${Array[j]}
@@ -34,4 +34,4 @@ do
 	fi
 	done
 done
-echo "Descending Order : " ${Array[@]}
+echo "Assending Order : " ${Array[@]}
