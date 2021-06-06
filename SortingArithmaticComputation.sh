@@ -1,6 +1,6 @@
 #! /bin/bash -x
 
-read -p "Enter 3 inputs a, b and c : " a b c;	#Taking 3 inputs
+read -p "Enter 3 inputs a, b and c : " a b c;   #Taking 3 inputs
 
 #Conditions 1 to 4:
 condition1=$(( ($b*$c)+$a ));
@@ -20,3 +20,18 @@ echo "Results of all computations : " ${Results[@]}
 #Dictionary to array :
 Array=(${Results[@]})
 echo ${Array[*]}
+
+#Sorting in Ascending order :
+for (( i=0;i<${#Array[@]};i++ ))
+do
+        for (( j=0;j<${#Array[@]};j++ ))
+        do
+        if [ ${Array[i]} -lt ${Array[j]} ]
+        then
+        temp=${Array[i]}
+        Array[i]=${Array[j]}
+        Array[j]=$temp
+        fi
+        done
+done
+echo "Assending Order : " ${Array[@]}
